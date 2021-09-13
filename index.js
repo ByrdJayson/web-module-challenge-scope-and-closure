@@ -28,11 +28,12 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  Counter 1 is persistent through iterations of the loop
   2. Which of the two uses a closure? How can you tell?
-  
+  2, it reaches outside of the function to obtain the variable value
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better? 
+     1 would be better if you needed to keep a persistent tally,
 */
 
 // counter1 code
@@ -82,11 +83,15 @@ Use the finalScore function below to do the following:
 */ 
 
 function finalScore(inningcb, num){
-  const currentScore = {
-    Home: 0,
-    Away: 0
+  let currentScore = {Home: 0, Away: 0};
+  return function addInnings(){
+    for(let i = 0; i < num; i++){
+      currentScore.Home = currentScore.Home + inningcb;
+      currentScore.Away = current.Away + inningcb;
+    }
   }
-    return currentScore
+    addInnings();
+    
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
