@@ -122,15 +122,16 @@ Use the scoreboard function below to do the following:
   */
 
 function scoreboard(getInningScorecb, inningcb, num) {
-  let scorecard = [];
+/*   let scorecard = [];
   for(let i = 0; i < num; i++){
+    let scorecard = [];
     scorecard[i].push(`Inning ${i}: ${getInningScorecb}`);
   
   
 }
-  return scorecard;
+  return scorecard; */
 }
-console.log(scoreboard(getInningScore, inning, 9));
+
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
