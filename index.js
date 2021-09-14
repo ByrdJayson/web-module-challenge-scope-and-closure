@@ -116,42 +116,21 @@ Use the scoreboard function below to do the following:
   5. If there's a tie at the end of the innings, add this message containing the score to the end of the array:  "This game will require extra innings: Away 12 - Home 12"  (see tie example below)
      If there isn't a tie, add this message to the end of the array: "Final Score: Away 13 - Home 11"  (see no tie example below)
   
-  NO TIE example: invoking scoreboard(getInningScore,inning, 9) might return 
-  an array of strings like this:
-[
-  "Inning 1: Away 1 - Home 2", 
-  "Inning 2: Away 2 - Home 1",
-  "Inning 3: Away 0 - Home 2", 
-  "Inning 4: Away 2 - Home 2", 
-  "Inning 5: Away 2 - Home 0", 
-  "Inning 6: Away 1 - Home 1", 
-  "Inning 7: Away 0 - Home 2", 
-  "Inning 8: Away 2 - Home 2",
-  "Inning 9: Away 1 - Home 0", 
-  "Final Score: Away 11 - Home 12"  
-]
+  
 
-  TIE example: invoking scoreboard(getInningScore,inning, 9) might return 
-  an array of strings like this:
-[
-  "Inning 1: Away 1 - Home 1", 
-  "Inning 2: Away 2 - Home 2",
-  "Inning 3: Away 1 - Home 0", 
-  "Inning 4: Away 1 - Home 2", 
-  "Inning 5: Away 0 - Home 0", 
-  "Inning 6: Away 2 - Home 1", 
-  "Inning 7: Away 0 - Home 2", 
-  "Inning 8: Away 2 - Home 1",
-  "Inning 9: Away 1 - Home 1", 
-  "This game will require extra innings: Away 10 - Home 10"
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningScorecb, inningcb, num) {
+  let scorecard = [];
+  for(let i = 0; i < num; i++){
+    scorecard[i].push(`Inning ${i}: ${getInningScorecb}`);
+  
+  
 }
-
-
+  return scorecard;
+}
+console.log(scoreboard(getInningScore, inning, 9));
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
